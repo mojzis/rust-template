@@ -1,0 +1,34 @@
+# The Rust binary ships as a Python wheel (maturin `bindings = "bin"`), so
+# `uv tool install rust-template` / `uvx rust-template` work. The version comes
+# from Cargo.toml.
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "rust-template"
+description = "A Rust CLI project template"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "mojzis", email = "mojzisek@gmail.com"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["cli", "rust"]
+dynamic = ["version"]
+dependencies = []
+
+[project.urls]
+homepage = "https://github.com/mojzis/rust-template"
+repository = "https://github.com/mojzis/rust-template"
+
+[tool.maturin]
+bindings = "bin"
+strip = true

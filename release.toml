@@ -1,0 +1,13 @@
+# cargo-release configuration
+# Usage: cargo release patch|minor|major
+# (`gh-monitor release` drives this via `cargo release version` + `replace`.)
+
+tag = true
+tag-message = "Release {{version}}"
+pre-release-commit-message = "Release v{{version}}"
+push = true
+
+# Don't publish to crates.io — the binary is distributed as a Python wheel.
+publish = false
+
+verify = true

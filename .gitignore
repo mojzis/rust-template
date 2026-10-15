@@ -1,0 +1,25 @@
+# Rust
+/target/
+**/*.rs.bk
+
+# Python (maturin wheel builds)
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+dist/
+.venv/
+
+# Claude Code
+.claude/worktrees/
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Coverage / mutants
+lcov.info
+mutants.out*/
