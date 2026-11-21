@@ -71,3 +71,11 @@ linux/macos/windows + sdist → GitHub Release → PyPI (trusted publisher,
 environment `pypi`). `publish = false` in `release.toml` — nothing goes to
 crates.io. Release workflows are skipped while the repo is still marked as a
 template.
+
+## Release notes
+
+A change a user would notice adds one file to `release-notes/` in the same PR
+(`YYYY-MM-DD-short-slug.md`, frontmatter `kind: added|changed|fixed|removed`, one or two
+plain sentences). Run `uvx relnotes@latest guide` before writing one: it has the wording rules.
+Dependency bumps, CI, refactors and tests get no note. `uvx relnotes@latest check` validates them.
+The release workflow turns them into the GitHub release, and the aesop site shows them.
